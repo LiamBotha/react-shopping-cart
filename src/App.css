@@ -1,38 +1,221 @@
-.App {
+body {
+  padding: 0;
+  margin: 0;
+  background: #1f1f1f;
+  color:white;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3rem;
+  color: white;
+  display:flex;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  margin: 0.5rem 0.5rem;
+}
+
+.link:visited {
+  color:white;
+}
+
+.shop {
+  margin-top: 3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.shop-items{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.shop-items > div{
+  margin: 1rem 1rem;
+}
+
+.item-preview {
+  background: red;
+  width: 325px;
+  height: 400px;
+  text-align: center;
+  object-fit: cover;
+  margin: 0.2rem 1rem;
+}
+
+.shop-items > div > button {
+  margin-top: 0.3rem;
+  padding: 0.5rem 2rem;
+  border-radius: 1px;
+  border: 1px solid white;
+  background: transparent;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.shop-items > div > button:hover {
+  background: white;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-cart {
+  background: none;
+  color: white;
+  border: 2px solid white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.2rem 1rem;
+  position: fixed;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+}
+
+.btn-cart:hover {
+  background: white;
+  color: black;
+}
+
+.btn-exit {
+  background: none;
+  color: black;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
+#btn-clear {
+  background: none;
+  color: black;
+  border: 2px solid black;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.2rem;
+  margin: 0.5rem 0 0 0;
+}
+
+#btn-clear:hover {
+  background: black;
+  color: white;
+}
+
+#btn-checkout {
+  background: none;
+  color: black;
+  border: 2px solid black;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+#btn-checkout:hover {
+  background: black;
+  color: white;
+}
+
+#overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 1;
+}
+
+#cart-panel {
+  background: #f0f0f0;
+  color: Black;
+  padding: 0 2rem 0 4rem;
+  width: 450px;
+  height: 100vh;
+  text-align: left;
+  overflow: scroll;
+}
+
+.cart-item {
+  margin: 0.3rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.cart-item > img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  background: #cfcfcf;
+  margin: 0.2rem 1rem 0.2rem 0;
+  border: 1px solid transparent;
+}
+
+.cart-item > h2 {
+  margin: auto 0;
+}
+
+.cart-item > .cart-amount {
+  margin: auto 2rem;
+  font-size: 0.8rem;
+}
+
+.amount-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.amount-selector > input {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0.2rem;
+  width: 3rem;
+  text-align: center;
+}
+
+.amount-selector > button {
+  margin: 0.1rem 0.7rem;
+  padding: 0 0.5rem;
+  border-radius: 1px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.darken {
+  background: rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+#home {
+  text-align: center;
+  margin: 3rem 0 0 0;
+}
+
+#comp-name {
+  margin: 10rem 4rem 3rem 2rem;
+  width: 30rem;
+  font-size: 3rem;
+}
+
+#comp-tagline, #comp-sales-pitch {
+  margin: 1rem 4rem;
+  width: 30rem;
+  text-align: left;
+  font-size: 2rem;
 }
